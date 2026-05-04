@@ -4,9 +4,9 @@
 struct Node{
     int data;
     struct Node *next;
-};
+};//tp
 
-struct Node *head = NULL;
+struct Node *head = NULL;//tp
 
 void push_front(int data){
     struct Node *baru = malloc(sizeof(struct Node));
@@ -14,6 +14,7 @@ void push_front(int data){
     baru->next=head;
     head = baru;
 }
+// https://www.geeksforgeeks.org/c/c-program-to-implement-singly-linked-list/
 
 void push_back(int data){
     struct Node *baru = malloc(sizeof(struct Node));
@@ -30,6 +31,7 @@ void push_back(int data){
         temp->next=baru;
     }
 }
+// https://www.geeksforgeeks.org/c/c-program-to-implement-singly-linked-list/
 
 void delete(int data){
     struct Node *temp = head;
@@ -54,6 +56,7 @@ void delete(int data){
     }
     free(temp);
 }
+//https://www.geeksforgeeks.org/c/c-program-for-deleting-a-node-in-a-linked-list/
 
 void find(int data) {
     struct Node* temp = head;
@@ -67,7 +70,8 @@ void find(int data) {
         a++;
     }
     printf("NOT FOUND\n");
-}
+}//https://www.geeksforgeeks.org/c/c-program-for-searching-an-element-in-a-linked-list/
+//disini logikanya boolean, tapi saya ubah ke bentuk void karena tidak me-return 1 dan 0
 
 void tampilin(){
     struct Node *temp = head;
@@ -81,6 +85,7 @@ void tampilin(){
         temp = temp->next;
     }
 }
+//https://www.geeksforgeeks.org/c/c-program-to-implement-singly-linked-list/
 
 int main(){
     int M,N,data;
@@ -103,3 +108,5 @@ int main(){
     tampilin();
     return 0;
 }
+
+//sumber dari tp dan web-web
